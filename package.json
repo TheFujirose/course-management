@@ -1,0 +1,36 @@
+{
+	"name": "course-management",
+	"version": "1.0.0",
+	"description": " Express app with EJS and Mongoose connection that allows for management of courses.",
+	"main": "server.js",
+	"scripts": {
+		"test": "nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/TheFujirose/course-management.git"
+	},
+	"keywords": [
+		"express",
+		"ejs",
+		"mongoose",
+		"web",
+		"app",
+		"html"
+	],
+	"author": "Carson Fujita",
+	"license": "GPL-3.0-or-later",
+	"bugs": {
+		"url": "https://github.com/TheFujirose/course-management/issues"
+	},
+	"homepage": "https://github.com/TheFujirose/course-management#readme",
+	"dependencies": {
+		"dotenv": "^17.2.3",
+		"ejs": "^3.1.10",
+		"express": "^5.1.0",
+		"express-session": "^1.18.2",
+		"express-validator": "^7.3.0",
+		"mongoose": "^8.19.3",
+		"nodemon": "^3.1.11"
+	}
+}
