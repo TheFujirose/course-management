@@ -1,0 +1,240 @@
+/**
+* Author: Carson Fujita
+* Copyright (c) 2025 Carson Fujita. 
+*/
+
+/* --- Global Styles --- */
+:root {
+	--primary-light: #F7F2EF;
+	--primary-dark: #F2E9E4;
+	--secondary-light: #4A4E69;
+	--secondary-dark: #22223B;
+	--warning-red: #E4586B;
+	--button-blue: #595CE3;
+	--dull-gray: #727272;
+}
+
+body {
+	margin: 0 !important;
+	padding: 0 !important;
+	background-color: var(--primary-light);
+}
+
+.wrapper {
+	/* -- Layout -- */
+	display: flex;
+	box-sizing: border-box;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+
+	/* Includes padding and borders in the total width */
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+main,
+header,
+footer {
+	box-sizing: border-box;
+}
+
+header,
+footer {
+	flex: 0 1 30%;
+	text-align: center;
+	background-color: var(--secondary-light, #4A4E69);
+}
+
+main {
+	/* -- Layout -- */
+	order: 1;
+	flex: 1 0 80%;
+
+	padding: 3rem 0 1.5rem 0;
+}
+
+/* --- Navigation --- */
+
+
+/* a nice spaced out navigation */
+header {
+	/* -- Layout -- */
+	display: flex;
+	padding: 2rem;
+	order: 0;
+	justify-content: space-between;
+	align-items: center;
+
+	/* -- Style -- */
+}
+
+footer {
+	/* -- Layout -- */
+	flex-shrink: 2;
+	flex-flow: row nowrap;
+	order: 2;
+	gap: 1rem;
+
+	/* -- Style -- */
+	background: var(--secondary-light, #4A4E69);
+}
+
+/* a large hgroup in the footer */
+.footer-hgroup {
+	/* -- Layout -- */
+	flex: 1 1 70%;
+	order: 0;
+	gap: 0.5rem;
+}
+
+/* the very bottom of the footer */
+.footer-bottom {
+	/* -- Layout -- */
+	order: 1;
+	padding: 0.5rem;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: baseline;
+	justify-content: space-between;
+
+	/* -- Style -- */
+	background: var(--secondary-dark, #22223B);
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	height: 1rem;
+}
+
+/* removing styling on links of navigation */
+nav a,
+nav a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+nav a:active {
+	text-decoration: none;
+	color: var(--secondary-dark, #22223B);
+}
+
+nav a:hover,
+nav a:focus {
+	text-decoration: none;
+	color: aliceblue, #F0F8FF
+}
+
+/* --- Fonts --- */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	color: white;
+}
+
+h1 {
+	font-size: 41px;
+	/* bold */
+	font-weight: 700;
+}
+
+h2,
+h3,
+h4 {
+	/* semi bold */
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 39px;
+}
+
+h3 {
+	font-size: 29px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 22px;
+}
+
+p {
+	font-size: 20px;
+}
+
+.dark-text {
+	color: var(--secondary-dark);
+}
+
+.grey-text {
+	color: var(--secondary-light, #4A4E69);
+}
+
+/* --- ICON --- */
+.save-icon,
+.remove-icon,
+.edit-icon {
+	color: white;
+	font-variation-settings:
+		'FILL' 0,
+		'wght' 700,
+		'GRAD' 0,
+		'opsz' 48
+}
+
+/* --- button --- */
+
+.button {
+	/* -- Layout -- */
+	display: flex;
+	box-sizing: border-box;
+	width: 60px;
+	height: 60px;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+
+
+	/* -- Style -- */
+	border-radius: 30px;
+	border-radius: 30px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.red a:active,
+.blue a:active {
+	background-color: var(--primary-dark);
+}
+
+.red {
+	background-color: var(--warning-red, #E4586B);
+	background: var(--warning-red, #E4586B);
+}
+
+.red a:hover {
+	background-color: red;
+}
+
+.blue {
+	background-color: var(--button-blue, #595CE3);
+	background: var(--button-blue, #595CE3);
+}
+
+.blue a:hover {
+	background-color: blue;
+}

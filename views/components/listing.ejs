@@ -1,0 +1,22 @@
+<div class="listing">
+	<div class="listing-header">
+		<h3><%= title %></h3>
+		<div class="button-bar">
+			<div class="button blue">
+			<!-- basic testing operation TODO implement alert, change to button -->
+			<a href="edit/<%= code %>"><span class="edit-icon material-symbols-outlined">edit</span></a>
+			</div>
+			<div class="button red">
+			<a href="edit/<%= code %>"><span class="remove-icon material-symbols-outlined">remove</span></a>
+			</div>
+		</div>
+	</div>
+	<div class="listing-row">
+		<h4 class="grey-text">Code</h4>
+		<h5 class="grey-text"><%= code %></h5>
+	</div>
+	<div class="listing-row">
+		<h4 class="grey-text">Credits</h4>
+		<h5 class="grey-text"><%= credits %></h5>
+	</div>
+</div>
