@@ -1,5 +1,7 @@
 <%- include("partials/header",{title: "Home Page"}) %>
 <main>
-
+	<% for (const course of courses) { %>
+		<%- include("components/listing.ejs",{title: course.title, credits: course.credits,code: course.code}) %>
+	<% } %>
 </main>
 <%- include("partials/footer") %>

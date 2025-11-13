@@ -20,6 +20,14 @@ body {
 	background-color: var(--primary-light);
 }
 
+main {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
 .wrapper {
 	/* -- Layout -- */
 	display: flex;

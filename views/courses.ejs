@@ -1,6 +1,10 @@
 <%- include("partials/header",{title: "Home Page"}) %>
 <main>
-<%- include("components/listing.ejs",{title: "Testing site", credits: 5,code: "TESTCODE"}) %>
-<%- include("components/editor.ejs", {course: {code: "TEST", title: "TEST TITLE", credits: 3}}) %>
+<%- include("components/editor.ejs", {
+	course: {
+		code: course.code ? code: "", 
+		title: course.title ? title: "", 
+		credits: course.credits ? credits : 0
+	}}) %>
 </main>
 <%- include("partials/footer") %>
