@@ -1,0 +1,11 @@
+<%- include("partials/header",{name: "Editor"}) %>
+<main>
+<%- include("components/editor.ejs", {
+	course: {
+		_id: course._id,
+		code: course.code ? course.code:"Enter new code", 
+		title: course.title? course.title:"Enter course title", 
+		credits: course.credits? course.credits: 0,
+	}}) %>
+</main>
+<%- include("partials/footer") %>

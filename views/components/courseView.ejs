@@ -1,0 +1,25 @@
+<div class="listing">
+	<div class="listing-header">
+		<h3><%= title %></h3>
+		<div class="button-bar">
+			<form class="ignore" action="/edit/<%= _id %>" method="get">
+				<button class="button blue">
+					<span class="edit-icon material-symbols-outlined">edit</span>
+				</button>
+			</form>
+			<form class="ignore" action="/delete/<%= _id %>" method="post" onsubmit="return confirm('are you sure you want to delete?');">
+				<button class="button red">
+					<span class="remove-icon material-symbols-outlined">remove</span>
+				</button>
+			</form>
+		</div>
+	</div>
+	<div class="listing-row">
+		<h4 class="grey-text">Code</h4>
+		<h5 class="grey-text"><%= code %></h5>
+	</div>
+	<div class="listing-row">
+		<h4 class="grey-text">Credits</h4>
+		<h5 class="grey-text"><%= credits %></h5>
+	</div>
+</div>
