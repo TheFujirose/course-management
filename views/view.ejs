@@ -1,0 +1,7 @@
+<%- include("partials/header",{name: "Course list view"}) %>
+<main>
+	<% for (const course of courses) { %>
+		<%- include("components/courseView.ejs",{_id: course._id,title: course.title, credits: course.credits,code: course.code}) %>
+	<% } %>
+</main>
+<%- include("partials/footer") %>

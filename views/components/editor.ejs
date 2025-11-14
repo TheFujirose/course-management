@@ -1,10 +1,18 @@
-<form class="editor" action="/update/<%= course.code %>" method="post">
+<% if(course._id != 0) { %>
+<!--EJS deteched that there is a code; this is the form element for updating-->
+<form class="editor" action="/update/<%= course._id %>" method="post">
+<h1 class="grey-text">Edit</h1>
+<% } else { %> 
+<!-- EJS detected no valid code; this is the form for creating a new Course-->
+<form class="editor" action="/insert" method="post">
+<h1 class="grey-text">New</h1>
+<% } %>
 	<div class="editor-form">
-		<input type="text" class="editor-input" name="title" placeholder="Enter course title here..."
+		<input type="text" class="editor-input" name="title" id="title" placeholder="Enter course title here..."
 			value="<%= course.title %>" required />
 			<div class="editor-bottom">
-				<input class="editor-input" type="text" name="code" value="<%= course.code %>" placeholder="Enter course code here" required />
-				<input class="editor-input" type="number" name="credits" value="<%= course.credits %>" step="0.5" min="0" max="4" required/>
+				<input class="editor-input" type="text" id="code" name="code"  value="<%= course.code %>" placeholder="Enter course code here" required />
+				<input class="editor-input" type="number" id="credits" name="credits" value="<%= course.credits %>" step="0.5" min="0" max="4" required/>
 			</div>
 	</div>
 	<button class="button blue" type="submit">
